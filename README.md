@@ -50,20 +50,36 @@
 
 ---
 
-## 3. Compiling & Exporting the APK
+## 3. Compiling & Exporting the APK (Kotlin / Gradle — Not Flutter)
 
-### In Google AI Studio
-- **Live Streaming Emulator**: The APK compiles and installs automatically onto the built-in Streaming Android Emulator after each build.
-- **Download APK / AAB or Export ZIP**: Open the **Settings / Export** menu in the AI Studio toolbar to generate and download the signed APK/AAB or export the full Gradle project as a ZIP archive.
+> **Important**: This is a **native Android project (Kotlin + Jetpack Compose + Gradle)**, so it uses `build.gradle.kts` rather than Flutter's `pubspec.yaml`. Do **not** use `flutter build apk`.
 
-### Local Command-Line Gradle Build
+### Option A: One-Click APK Download in Google AI Studio (Fastest)
+1. Click the **Settings (gear) / Export** icon in the top-right corner of Google AI Studio.
+2. Select **Download APK** (or **Build APK / AAB**). AI Studio compiles and signs the APK directly in the cloud container without needing a local Android SDK installation.
+
+### Option B: Building Locally on Linux (`~/Stažené/Lege-Artis-Consulium-main`)
+Ensure you have **JDK 17+** and the **Android SDK** (`ANDROID_HOME` / `ANDROID_SDK_ROOT`) configured on your machine, then run either the included `build-apk.sh` script or `./gradlew`:
+
 ```bash
-# Compile Debug APK
-gradle :app:assembleDebug
+cd ~/Stažené/Lege-Artis-Consulium-main
 
-# Run Unit Tests (Q-MAX Cypher & W4 Metasimulator)
-gradle :app:testDebugUnitTest
+# One-step build script (decodes debug.keystore and runs assembleDebug)
+chmod +x gradlew build-apk.sh
+./build-apk.sh
 ```
 
-The compiled debug APK is output to:
-`app/build/outputs/apk/debug/app-debug.apk`
+Or run the steps manually:
+
+```bash
+cd ~/Stažené/Lege-Artis-Consulium-main
+[ -f debug.keystore ] || base64 -d debug.keystore.base64 > debug.keystore
+chmod +x gradlew
+./gradlew :app:assembleDebug
+```
+
+The installable APK will be generated at:
+```text
+app/build/outputs/apk/debug/app-debug.apk
+```
+
