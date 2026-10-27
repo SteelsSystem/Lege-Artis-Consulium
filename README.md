@@ -1,11 +1,69 @@
-<div align="center">
+# Lege Artis Consulium — Bio-Legal NGS & Q-MAX Offline Cypher Suite
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+**Lege Artis Consulium** (`com.aistudio.legeartis.ngsbio`) is an Android bioinformatics, cryptographic security, and medico-legal consulting application built with **Kotlin**, **Jetpack Compose (Material 3)**, **Room SQLite (KSP)**, and **Firebase AI Logic (Gemini API)**.
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 1. Architecture & Core Modules
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### A. NGS Genomic Analysis Workspace (`NGS Lab`)
+- **3D Molecular Structure & Locus Sync**: Hardware-accelerated 3D double-helix canvas supporting touch rotation (yaw/pitch) and spring-animated locus synchronization when selecting variants from the NGS table.
+- **Base-Call Chromatogram & Phred Magnification Loupe**: Interactive A/T/C/G nucleotide trace viewer with drag/tap scrubbing, local peak magnification, and Phred quality zone shading ($Q \ge 30$ clinical confidence vs. $Q < 20$ sequencing artifacts).
+- **Volcano Distribution Plot & Live Threshold Curtain**: Interactive $-\log_{10}(p)$ vs. Variant Allele Frequency (VAF) scatter plot with a live threshold curtain controlled by filter sliders.
+- **Sample QC Telemetry & Lege Artis Compliance Calculator**: Combines Q30 score, read depth coverage, and Ts/Tv ratio with medico-legal compliance switches (*GDPR & Informed Consent*, *Dual Bio-Legal Sign-Off*, and *T=1 podání Single-Submission Lock*).
 
-</div>
+### B. Local Secure Q-MAX Cypher & Random Hashing Sync (`Q-MAX Cypher`)
+- **Salted SHA-256/512 & AES-GCM Block Cypher (`QMaxCypherEngine`)**: Computes cryptographic hash chains, CRC32 frame checks, and authenticated local payload encryption.
+- **Interactive 128-Bit Matrix (`8×16`) & Avalanche Inspector**: Allows toggling individual bits in the 128-bit matrix to inspect real-time SHA-256 Hamming diffusion (%) and tension-resilience scores.
+- **Offline Room Database Persistence (`LegeArtisDatabase`)**: Stores deterministic binary sync packets (`QMAXv4|SLT:...|CRC:...|RES:...|HSH:...`) locally on-device.
+
+### C. W4 Calibration Metasimulator & Multi-Model Gemini Studio (`MAP & AI`)
+- **Tension Reinforcement Metasimulator (`Task A → B → C` MAP-Processing)**:
+  - **Task A (Lookup)**: Indexes genomic locus telemetry and ACMG/AMP classification parameters.
+  - **Task B (Research & Q-MAX Cypher)**: Balances adversarial sequencing tension against reinforcement learning policy rates.
+  - **Task C (Define MAP-Processing)**: Emits a deterministic `T=1 podání` single-submission token and 4-step `Divide Reasoning` verification trail.
+- **Multi-Model Gemini AI Logic (`AiCopilotViewModel`)**:
+  - **High Thinking Mode**: `gemini-4-argon` configured with `ThinkingLevel.HIGH` for complex clinical and medico-legal reasoning.
+  - **Google Search Grounding Mode**: `gemini-3.8-flash` with `Tool.googleSearch()` for live ClinVar, gnomAD, and regulatory lookup.
+  - **Low-Latency Lab Mode**: `gemini-3.1-flash-lite` using `generateContentStream()` for rapid sub-second responses.
+  - **Studio Visual Generator**: `gemini-3-pro-image-preview` supporting selectable **1K**, **2K**, and **4K** (`ImageSize.SIZE_1K`, `SIZE_2K`, `SIZE_4K`) molecular and report visual synthesis.
+- **Stín v Kolonce — Semantic Institutional Audit**: Generates structured 5-part (`A–E`) bio-bureaucratic satire and semantic contradiction analyses.
+
+### D. Consulting Dossiers, Encrypted Client Portals & RBAC (`Portal & Audit`)
+- **Automated Version Tracking**: Commits semantic versions (`v1.0` → `v1.1` → `v1.2`) with immutable SHA-256 content hashes and changelogs.
+- **Encrypted Client Access Portals**: Passphrase-gated client portals with AES-256-GCM / Q-MAX token verification.
+- **Role-Based Permission Matrix (RBAC) & Live Activity Audit Log**: Granular role switching (*Lead Bioinformatician*, *Clinical Geneticist*, *Legal Counsel*, *Client Reviewer*) and real-time local Room activity logging.
+
+---
+
+## 2. Color Palette & Accessibility (Microscope-Safe Dual Mode)
+
+| Token Role | Dark Mode (Microscope / Darkroom) | Light Mode (Clinical / Legal Review) |
+| :--- | :--- | :--- |
+| **Background** | `#090D14` (Deep Optical Obsidian) | `#F4F7FA` (Sterile Alabaster) |
+| **Surface / Elevated** | `#111823` / `#1A2433` | `#FFFFFF` / `#EBF0F5` |
+| **Primary Accent** | `#38BDF8` (Cerenkov Cyan) | `#0284C7` (Deep Cobalt) |
+| **Secondary Accent** | `#818CF8` (Helix Indigo) | `#4F46E5` (Legal Ultramarine) |
+| **Pathogenic Alert** | `#EF4444` (Crimson Pulse) | `#EF4444` (Crimson Pulse) |
+| **Sequencing Artifact** | `#F59E0B` (Amber Warning) | `#F59E0B` (Amber Warning) |
+| **Benign / Verified** | `#10B981` (Bio-Emerald) | `#059669` (Clinical Emerald) |
+
+---
+
+## 3. Compiling & Exporting the APK
+
+### In Google AI Studio
+- **Live Streaming Emulator**: The APK compiles and installs automatically onto the built-in Streaming Android Emulator after each build.
+- **Download APK / AAB or Export ZIP**: Open the **Settings / Export** menu in the AI Studio toolbar to generate and download the signed APK/AAB or export the full Gradle project as a ZIP archive.
+
+### Local Command-Line Gradle Build
+```bash
+# Compile Debug APK
+gradle :app:assembleDebug
+
+# Run Unit Tests (Q-MAX Cypher & W4 Metasimulator)
+gradle :app:testDebugUnitTest
+```
+
+The compiled debug APK is output to:
+`app/build/outputs/apk/debug/app-debug.apk`

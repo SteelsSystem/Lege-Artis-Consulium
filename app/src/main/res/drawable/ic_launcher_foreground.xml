@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer Cryptographic Hexagon Shield -->
+    <path
+        android:fillColor="#1A38BDF8"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2.8"
+        android:pathData="M54,22 L80,37 L80,71 L54,86 L28,71 L28,37 Z" />
+    <!-- DNA Strand A (Cyan) -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M38,34 C38,44 70,44 70,54 C70,64 38,64 38,74 L44,74 C44,66 76,66 76,54 C76,42 44,42 44,34 Z" />
+    <!-- DNA Strand B (Q-MAX Emerald) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M70,34 C70,44 38,44 38,54 C38,64 70,64 70,74 L64,74 C64,66 32,66 32,54 C32,42 64,42 64,34 Z" />
+    <!-- Hydrogen Bond Binary Rungs -->
+    <path
+        android:fillColor="#818CF8"
+        android:pathData="M44,39 L64,39 L64,43 L44,43 Z M42,52 L66,52 L66,56 L42,56 Z M44,65 L64,65 L64,69 L44,69 Z" />
+    <!-- Center Q-MAX Core Lock Node -->
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M54,49 A5,5 0 1,1 53.99,49 Z" />
+</vector>

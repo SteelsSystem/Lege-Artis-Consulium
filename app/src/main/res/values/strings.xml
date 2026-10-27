@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Lege Artis</string>
+    <string name="app_subtitle">Bio-Legal NGS &amp; Q-MAX Offline Cypher Suite</string>
+    <string name="nav_ngs_dashboard">NGS Lab</string>
+    <string name="nav_qmax_cypher">Q-MAX Cypher</string>
+    <string name="nav_metasim_ai">MAP &amp; AI</string>
+    <string name="nav_consulting_portal">Portal &amp; Audit</string>
+    <string name="toggle_theme_desc">Toggle microscope dark mode and clinical light mode</string>
+    <string name="switch_role_desc">Switch active user role for RBAC permissions</string>
+    <string name="section_3d_molecule">3D Molecular Structure &amp; Variant Locus</string>
+    <string name="section_chromatogram">Base-Call Chromatogram &amp; Phred Loupe</string>
+    <string name="section_volcano_curtain">Variant Distribution &amp; Live Threshold Curtain</string>
+    <string name="section_qc_metrics">Sample QC Metrics &amp; Lege Artis Calculator</string>
+    <string name="section_variant_table">Genomic Variant Calls (NGS Pipeline)</string>
+    <string name="section_qmax_matrix">Interactive 128-Bit Q-MAX Cypher Matrix</string>
+    <string name="section_sync_packets">Offline Room Binary Sync Packets</string>
+    <string name="section_metasimulator">Tension Reinforcement &amp; Task A-B-C MAP Pipeline</string>
+    <string name="section_ai_copilot">Multi-Model Gemini Clinical &amp; Legal Studio</string>
+    <string name="section_semantic_satire">Stín v Kolonce — Semantic Institutional Audit</string>
+    <string name="section_versioned_docs">Version-Tracked Consulting Dossiers</string>
+    <string name="section_encrypted_portals">Encrypted Client Access Portals</string>
+    <string name="section_rbac_audit">Role Permissions &amp; Real-Time Activity Log</string>
+</resources>

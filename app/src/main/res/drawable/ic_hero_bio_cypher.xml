@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="120dp"
+    android:viewportWidth="360"
+    android:viewportHeight="120">
+    <path android:pathData="M0,0h360v120h-360z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="0"
+                android:startY="0"
+                android:endX="360"
+                android:endY="120"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#090D14" />
+                <item android:offset="0.5" android:color="#111C2D" />
+                <item android:offset="1.0" android:color="#162840" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Grid Matrix Lines -->
+    <path
+        android:strokeColor="#1F38BDF8"
+        android:strokeWidth="1"
+        android:pathData="M0,30 L360,30 M0,60 L360,60 M0,90 L360,90 M60,0 L60,120 M120,0 L120,120 M180,0 L180,120 M240,0 L240,120 M300,0 L300,120" />
+    <!-- Chromatogram Wave A -->
+    <path
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2.5"
+        android:pathData="M0,85 C30,85 45,25 60,25 C75,25 90,90 120,90 C150,90 165,35 180,35 C195,35 210,80 240,80 C270,80 285,20 300,20 C315,20 330,85 360,85" />
+    <!-- Chromatogram Wave B -->
+    <path
+        android:strokeColor="#10B981"
+        android:strokeWidth="2.2"
+        android:pathData="M0,65 C25,65 40,95 60,95 C80,95 100,30 120,30 C140,30 160,85 180,85 C200,85 220,40 240,40 C260,40 280,90 300,90 C320,90 340,50 360,50" />
+    <!-- Pathogenic Peak Marker -->
+    <path
+        android:strokeColor="#EF4444"
+        android:strokeWidth="2"
+        android:pathData="M180,10 L180,110" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M180,35 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" />
+</vector>
